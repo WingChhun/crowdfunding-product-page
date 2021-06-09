@@ -1,0 +1,44 @@
+@import './colors.scss';
+@import './mixins.scss';
+@import './normalize.scss';
+
+#section__header {
+  background-image: url('../images//image-hero-desktop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  height: 400px;
+  color: white;
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 166px 60px 166px;
+
+    // navigation
+    ul {
+      width: 100%;
+      max-width: 225px;
+      display: flex;
+      list-style: none;
+      li {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  border: 1px solid orange;
+  height: 400px;
+  background-color: black;
+  opacity: 0.6;
+  mix-blend-mode: normal;
+}
