@@ -76,7 +76,6 @@ body {
         /* identical to box height */
         display: flex;
         align-items: center;
-        text-align: center;
 
         color: $color-subheader;
         margin-bottom: 40px;
@@ -149,19 +148,168 @@ body {
 .card {
   @include border-card;
 
-  & + .pledge-container {
-    border: 1px solid red;
-  }
-
-  & + .about-section {
-    border: 1px solid red;
-  }
-
   & + .item {
     padding: 38px 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: Commissioner;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      display: flex;
+      align-items: center;
+
+      color: #000000;
+    }
+
+    h3 {
+      font-family: Commissioner;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+
+      color: #3cb3ab;
+    }
+
+    p {
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      p {
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        > span {
+          font-family: Commissioner;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 39px;
+          display: flex;
+          align-items: center;
+
+          color: #000000;
+          padding-right: 8px;
+        }
+      }
+    }
   }
 }
 
+.about-section {
+  display: flex;
+
+  h2 {
+    align-self: flex-start;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 35px;
+  }
+
+  p {
+    text-align: left;
+    align-self: flex-start;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    /* or 187% */
+
+    display: flex;
+    text-align: left;
+
+    color: #7a7a7a;
+  }
+}
+
+.pledge-container {
+  margin-bottom: 24px;
+  &--row {
+    height: 63px;
+    width: 100%;
+    display: flex;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      & h3 {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+      }
+
+      & p {
+        font-family: Commissioner;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
+        color: #7a7a7a;
+      }
+    }
+
+    > div:first-child,
+    > div:nth-child(2) {
+      padding-right: 42px;
+      border-right: 1px solid #000000;
+    }
+
+    > div:nth-child(2),
+    & > div:nth-child(3) {
+      padding-left: 42px;
+    }
+  }
+
+  .progress-bar {
+    margin-top: 37px;
+    background: #2f2f2f;
+
+    border-radius: 33.5px;
+    border: 1px solid #2f2f2f;
+
+    width: 100%;
+    display: flex;
+    & .progress {
+      background: #3cb3ab;
+      border-radius: 33.5px;
+    }
+  }
+}
 .hero {
 }
 
