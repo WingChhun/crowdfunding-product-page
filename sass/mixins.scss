@@ -1,0 +1,9 @@
+@import './colors.scss';
+
+@mixin border-card {
+  background-color: $color-white;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 48px;
+}
