@@ -1,7 +1,11 @@
 @import './colors.scss';
 @import './mixins.scss';
 @import './normalize.scss';
+@import './modal.scss';
 
+.noscroll {
+  overflow: hidden;
+}
 body {
   background-color: #f5f5f5;
 }

@@ -1,0 +1,94 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+.content {
+  position: relative;
+}
+
+#modal-bg-overlay {
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+}
+
+#modal-selection {
+  width: 564px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  padding: 48px;
+  font-family: Commissioner;
+
+  h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+  }
+  p {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 187% */
+
+    display: flex;
+    align-items: center;
+
+    color: #7a7a7a;
+  }
+
+  .card {
+    padding: 33px 28px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    input[type='radio'] {
+    }
+  }
+}
+
+[type='radio'],
+[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[type='radio'],
+[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  border: solid 1px #cccccc;
+  margin-right: 8px;
+  position: relative;
+  border-radius: 33px;
+}
+
+#modal-success {
+}
