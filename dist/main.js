@@ -1,2 +1,2 @@
-
+function filterOutOfStock(){document.querySelectorAll(".item").forEach((t=>{const e=t.querySelector(".item--quantity");if(e&&"0"===e.innerText){t.classList.add("item--disabled");const e=t.querySelector(".btn--primary");e&&e.classList.add("btn--disabled")}}))}function init(){filterOutOfStock()}init();
 //# sourceMappingURL=main.js.map

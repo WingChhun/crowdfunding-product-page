@@ -81,19 +81,6 @@ button {
         margin-bottom: 15px;
       }
 
-      p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-        /* identical to box height */
-        display: flex;
-        align-items: center;
-
-        color: $color-subheader;
-        margin-bottom: 40px;
-      }
-
       & .flex-container {
         display: flex;
         flex-direction: row;
@@ -118,10 +105,14 @@ button {
     padding: 18px 20px;
     width: 100%;
     max-width: 204px;
+  }
 
-    &--disabled {
-      opacity: 0.5;
-    }
+  &--disabled {
+    background: #2f2f2f;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border-radius: 33.5px;
+    border-color: #2f2f2f;
   }
 
   &--bookmark {
@@ -142,7 +133,7 @@ button {
       border-radius: 33.5px;
       opacity: 1 !important;
     }
-    // TODO: Finish logo alignment
+
     &-text {
       position: relative;
       border: none;
@@ -157,8 +148,19 @@ button {
       color: #7a7a7a;
     }
   }
-  &--bookmark-text {
-  }
+}
+
+.card--sub {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+
+  color: $color-subheader;
+  margin-bottom: 40px;
 }
 
 .card {
@@ -175,6 +177,20 @@ button {
 
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+
+    .item--sub {
+      font-family: Commissioner;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 30px;
+      /* or 187% */
+
+      display: flex;
+      align-items: center;
+
+      color: #7a7a7a;
     }
 
     h2 {
@@ -212,7 +228,7 @@ button {
       p {
         margin-top: 24px;
         margin-bottom: 24px;
-
+        line-height: 30px;
         > span {
           font-family: Commissioner;
           font-style: normal;
@@ -312,6 +328,15 @@ button {
   }
 }
 
+.hero-overlay {
+  position: absolute;
+  border: 1px solid orange;
+  height: 400px;
+  background-color: black;
+  opacity: 0.6;
+  mix-blend-mode: normal;
+}
+
 progress[value] {
   margin-top: 37px;
   width: 100%;
@@ -330,25 +355,4 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
   border-radius: 33.5px;
   background: $color-primary;
-}
-
-// ::-webkit-progress-bar {
-//   width: 100%;
-//   background: #979797;
-//   mix-blend-mode: normal;
-//   border-radius: 33.5px;
-// }
-
-// ::-webkit-progress-value {
-//   background: $color-primary;
-//   color: $color-primary;
-// }
-
-.hero-overlay {
-  position: absolute;
-  border: 1px solid orange;
-  height: 400px;
-  background-color: black;
-  opacity: 0.6;
-  mix-blend-mode: normal;
 }
